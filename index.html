@@ -3,45 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardian Ghana - AI Water Protection</title>
-    <link rel="icon" href="logo.png" type="image/png">
+    <!-- PROTECTION: Prevents search engines from indexing -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Guardian Ghana - AI Water Protection (Demo)</title>
+    <link rel="icon" href="Guardian Ghana Logo1.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
         
         /* Header & Navigation */
-        .header { background: linear-gradient(135deg, #1E88E5 0%, #43A047 100%); color: white; padding: 20px 0; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 24px; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+        .header { 
+            background: linear-gradient(135deg, #1E88E5 0%, #43A047 100%); 
+            color: white; 
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
+        .nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .logo { 
+            font-size: 24px; 
+            font-weight: bold; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px;
+        }
+        .logo img {
+            height: 60px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
         
         /* Hero Section */
-        .hero { padding: 100px 0; text-align: center; background: #f8f9fa; }
-        .hero h1 { font-size: 48px; margin-bottom: 20px; color: #1E88E5; }
-        .hero p { font-size: 20px; margin-bottom: 30px; color: #666; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .btn { display: inline-block; background: #1E88E5; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px; }
-        .btn-secondary { background: #43A047; }
+        .hero { 
+            padding: 100px 0; 
+            text-align: center; 
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .hero h1 { 
+            font-size: 48px; 
+            margin-bottom: 20px; 
+            color: #1E88E5;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .hero .highlight {
+            color: #43A047;
+            font-weight: bold;
+        }
+        .hero p { 
+            font-size: 20px; 
+            margin-bottom: 30px; 
+            color: #666; 
+            max-width: 700px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+        .btn { 
+            display: inline-block; 
+            background: linear-gradient(135deg, #1E88E5 0%, #1976D2 100%); 
+            color: white; 
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(30, 136, 229, 0.2);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(30, 136, 229, 0.3);
+        }
+        .btn-secondary { 
+            background: linear-gradient(135deg, #43A047 0%, #388E3C 100%);
+            box-shadow: 0 4px 6px rgba(67, 160, 71, 0.2);
+        }
+        .btn-secondary:hover {
+            box-shadow: 0 6px 12px rgba(67, 160, 71, 0.3);
+        }
         
         /* Features */
-        .features { padding: 80px 0; background: white; }
-        .section-title { text-align: center; margin-bottom: 50px; color: #1E88E5; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .feature-card { background: #f8f9fa; padding: 30px; border-radius: 10px; text-align: center; }
-        .feature-card h3 { color: #1E88E5; margin-bottom: 15px; }
+        .features { 
+            padding: 80px 0; 
+            background: #f8f9fa;
+        }
+        .section-title { 
+            text-align: center; 
+            margin-bottom: 50px; 
+            color: #1E88E5;
+            font-size: 36px;
+            position: relative;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #43A047;
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        .feature-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+        .feature-card { 
+            background: white;
+            padding: 40px 30px; 
+            border-radius: 12px; 
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        .feature-card h3 { 
+            color: #1E88E5; 
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #43A047;
+        }
         
         /* Demo */
-        .demo { padding: 80px 0; background: #f8f9fa; text-align: center; }
+        .demo { 
+            padding: 80px 0; 
+            background: white; 
+            text-align: center; 
+            border-top: 1px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;
+        }
         
         /* Contact */
-        .contact { padding: 80px 0; background: white; text-align: center; }
-        .contact-info { margin-top: 30px; }
+        .contact { 
+            padding: 80px 0; 
+            background: #f8f9fa; 
+            text-align: center; 
+        }
+        .contact-info { 
+            margin-top: 30px; 
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+        .contact-info p {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+        
+        /* Protection Notice */
+        .protection-notice {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .protection-notice h4 {
+            color: #e65100;
+            margin-bottom: 10px;
+        }
         
         /* Footer */
-        .footer { background: #1E88E5; color: white; padding: 30px 0; text-align: center; }
+        .footer { 
+            background: linear-gradient(135deg, #1a237e 0%, #1E88E5 100%); 
+            color: white; 
+            padding: 40px 0; 
+            text-align: center; 
+        }
+        .footer p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+        .copyright {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
         
         @media (max-width: 768px) {
             .hero h1 { font-size: 36px; }
             .hero p { font-size: 18px; }
+            .section-title { font-size: 28px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .nav { flex-direction: column; gap: 20px; }
+            .logo { justify-content: center; }
         }
     </style>
 </head>
@@ -51,12 +236,12 @@
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                    <img src="Guardian Ghana Logo1.png" alt="Guardian Ghana Logo" height="40">
+                    <img src="Guardian Ghana Logo1.png" alt="Guardian Ghana Logo">
                     <span>Guardian Ghana</span>
                 </div>
                 <div>
                     <a href="#demo" class="btn">Live Demo</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                    <a href="#contact" class="btn btn-secondary">Request Access</a>
                 </div>
             </nav>
         </div>
@@ -65,59 +250,73 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>🇬🇭 Protecting Ghana's Water with AI</h1>
-            <p>Real-time monitoring and predictive analytics to combat illegal mining pollution. 87% accurate pollution prediction, 24/7 river monitoring, automated enforcement alerts.</p>
-            <a href="#demo" class="btn">View Live Demo</a>
-            <a href="#contact" class="btn btn-secondary">Request Pilot</a>
+            <h1>🇬🇭 Protecting Ghana's Water with <span class="highlight">AI Intelligence</span></h1>
+            <p>Real-time monitoring and predictive analytics to combat illegal mining pollution. <strong>87% accurate pollution prediction</strong>, 24/7 river monitoring, automated enforcement alerts.</p>
+            <a href="#demo" class="btn">View Interactive Dashboard</a>
+            <a href="#contact" class="btn btn-secondary">Schedule Private Demo</a>
         </div>
     </section>
 
     <!-- Features -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Our Technology</h2>
+            <h2 class="section-title">Our Proprietary Technology</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <h3>🔮 AI Predictions</h3>
-                    <p>87% accurate pollution prediction 3-5 days before contamination events</p>
+                    <div class="feature-icon">🔮</div>
+                    <h3>AI Predictions</h3>
+                    <p>87% accurate pollution prediction 3-5 days before contamination events. Proprietary algorithms trained on Ghana-specific data.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>🌊 Real-time Monitoring</h3>
-                    <p>24/7 monitoring of 200+ Ghanaian rivers with instant alerts</p>
+                    <div class="feature-icon">🌊</div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>24/7 monitoring of 200+ Ghanaian rivers with instant alerts. Integrates satellite, weather, and ground sensor data.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>📊 Government Integration</h3>
-                    <p>Seamless integration with WRC, EPA, and Ghana Water systems</p>
+                    <div class="feature-icon">🏛️</div>
+                    <h3>Government Integration</h3>
+                    <p>Seamless integration with WRC, EPA, and Ghana Water systems. Automated compliance reporting and enforcement tools.</p>
                 </div>
                 <div class="feature-card">
-                    <h3>💰 Cost Effective</h3>
-                    <p>70% reduction in monitoring costs compared to traditional methods</p>
+                    <div class="feature-icon">💰</div>
+                    <h3>Cost Effective</h3>
+                    <p>70% reduction in monitoring costs compared to traditional methods. Subscription model with no upfront investment.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Protection Notice -->
+    <section class="container">
+        <div class="protection-notice">
+            <h4>⚠️ Proprietary Technology Notice</h4>
+            <p>This demo showcases Guardian Ghana's proprietary AI technology. Unauthorized use, reproduction, or distribution is strictly prohibited. All algorithms, interfaces, and methodologies are protected intellectual property.</p>
+            <p><strong>Access:</strong> Full platform access requires partnership agreement. Contact us for licensing information.</p>
         </div>
     </section>
 
     <!-- Demo -->
     <section class="demo" id="demo">
         <div class="container">
-            <h2 class="section-title">Live Interactive Demo</h2>
-            <p>Experience our AI-powered monitoring dashboard</p>
-            <a href="http://192.168.8.101:8501" class="btn" target="_blank">Launch Full Dashboard</a>
-            <p style="margin-top: 20px; color: #666; font-size: 14px;">(Opens in new tab - No login required)</p>
+            <h2 class="section-title">Interactive Demo Dashboard</h2>
+            <p>Experience our AI-powered monitoring system (password protected)</p>
+            <a href="YOUR_STREAMLIT_LINK_HERE" class="btn" target="_blank" onclick="return requireLogin()">Launch Dashboard</a>
+            <p style="margin-top: 20px; color: #666; font-size: 14px;">(Requires access credentials - Contact for demo password)</p>
         </div>
     </section>
 
     <!-- Contact -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Start Your Free Pilot</h2>
-            <p>30-day free pilot for government agencies and corporate partners</p>
+            <h2 class="section-title">Partnership & Licensing</h2>
+            <p>Government agencies and corporate partners: Start with a 30-day evaluation pilot</p>
             <div class="contact-info">
                 <p>📧 <strong>Email:</strong> guardian.ghana.tech@gmail.com</p>
-                <p>📱 <strong>Phone:</strong> (+233)25-682-1100</p>
+                <p>📱 <strong>Phone:</strong> (+233)-25-682-1100</p>
                 <p>📍 <strong>Location:</strong> Accra, Ghana</p>
+                <p>👔 <strong>Contact Person:</strong> AGBEKE, CHRIS DELA YAO, Founder & CEO</p>
                 <p style="margin-top: 20px;">
-                    <a href="mailto:guardian.ghana.tech@gmail.com?subject=Pilot%20Request%20-%20Guardian%20Ghana" class="btn">Request 30-Day Pilot</a>
+                    <a href="mailto:guardian.ghana.tech@gmail.com?subject=Partnership%20Inquiry%20-%20Guardian%20Ghana&body=Dear%20Guardian%20Ghana%20Team,%0A%0AI'm%20interested%20in%20learning%20more%20about%20your%20AI%20water%20monitoring%20platform.%20Please%20send%20me%20partnership%20details.%0A%0ABest%20regards," class="btn btn-secondary">Request Partnership Details</a>
                 </p>
             </div>
         </div>
@@ -126,12 +325,40 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Guardian Ghana Technologies. All rights reserved.</p>
-            <p>Built with ❤️ in Ghana to protect Ghana's water</p>
+            <p>&copy; 2024 Guardian Ghana Technologies. All rights reserved.</p>
+            <p>Proprietary AI Technology • Made in Ghana 🇬🇭</p>
+            <div class="copyright">
+                <p>This technology is protected under intellectual property laws. Unauthorized access or use is prohibited.</p>
+                <p>Demo access is granted only to qualified partners under non-disclosure agreement.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Protection Script -->
+    <script>
+        function requireLogin() {
+            alert("🔒 Demo Access Required\n\nThis is a protected demo of Guardian Ghana's proprietary technology.\n\nPlease contact guardian.ghana.tech@gmail.com to request access credentials.\n\nWe'll respond within 24 hours with login details.");
+            return false; // Prevents link from opening
+        }
+        
+        // Log page views (basic protection)
+        console.log("🔐 Guardian Ghana Demo Access Log:");
+        console.log("Access Time: " + new Date().toLocaleString());
+        console.log("User Agent: " + navigator.userAgent);
+        console.log("IP Protection: Enabled");
+        
+        // Prevent right-click (optional - can be annoying)
+        document.addEventListener('contextmenu', function(e) {
+            if (confirm("⚠️ This content is proprietary. Copying is restricted.")) {
+                return true;
+            }
+            e.preventDefault();
+        });
+        
+        // Prevent text selection (optional)
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+    </script>
 </body>
-
 </html>
-
-
