@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Ghana - AI Water Protection</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        
+        /* Header & Navigation */
+        .header { background: linear-gradient(135deg, #1E88E5 0%, #43A047 100%); color: white; padding: 20px 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+        
+        /* Hero Section */
+        .hero { padding: 100px 0; text-align: center; background: #f8f9fa; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; color: #1E88E5; }
+        .hero p { font-size: 20px; margin-bottom: 30px; color: #666; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .btn { display: inline-block; background: #1E88E5; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px; }
+        .btn-secondary { background: #43A047; }
+        
+        /* Features */
+        .features { padding: 80px 0; background: white; }
+        .section-title { text-align: center; margin-bottom: 50px; color: #1E88E5; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { background: #f8f9fa; padding: 30px; border-radius: 10px; text-align: center; }
+        .feature-card h3 { color: #1E88E5; margin-bottom: 15px; }
+        
+        /* Demo */
+        .demo { padding: 80px 0; background: #f8f9fa; text-align: center; }
+        
+        /* Contact */
+        .contact { padding: 80px 0; background: white; text-align: center; }
+        .contact-info { margin-top: 30px; }
+        
+        /* Footer */
+        .footer { background: #1E88E5; color: white; padding: 30px 0; text-align: center; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="logo.png" alt="Guardian Ghana Logo" height="40">
+                    <span>Guardian Ghana</span>
+                </div>
+                <div>
+                    <a href="#demo" class="btn">Live Demo</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>🇬🇭 Protecting Ghana's Water with AI</h1>
+            <p>Real-time monitoring and predictive analytics to combat illegal mining pollution. 87% accurate pollution prediction, 24/7 river monitoring, automated enforcement alerts.</p>
+            <a href="#demo" class="btn">View Live Demo</a>
+            <a href="#contact" class="btn btn-secondary">Request Pilot</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Our Technology</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🔮 AI Predictions</h3>
+                    <p>87% accurate pollution prediction 3-5 days before contamination events</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌊 Real-time Monitoring</h3>
+                    <p>24/7 monitoring of 200+ Ghanaian rivers with instant alerts</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Government Integration</h3>
+                    <p>Seamless integration with WRC, EPA, and Ghana Water systems</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💰 Cost Effective</h3>
+                    <p>70% reduction in monitoring costs compared to traditional methods</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <h2 class="section-title">Live Interactive Demo</h2>
+            <p>Experience our AI-powered monitoring dashboard</p>
+            <a href="YOUR_STREAMLIT_LINK_HERE" class="btn" target="_blank">Launch Full Dashboard</a>
+            <p style="margin-top: 20px; color: #666; font-size: 14px;">(Opens in new tab - No login required)</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Start Your Free Pilot</h2>
+            <p>30-day free pilot for government agencies and corporate partners</p>
+            <div class="contact-info">
+                <p>📧 <strong>Email:</strong> guardian.ghana.tech@gmail.com</p>
+                <p>📱 <strong>Phone:</strong> [Your Phone Number]</p>
+                <p>📍 <strong>Location:</strong> Accra, Ghana</p>
+                <p style="margin-top: 20px;">
+                    <a href="mailto:guardian.ghana.tech@gmail.com?subject=Pilot%20Request%20-%20Guardian%20Ghana" class="btn">Request 30-Day Pilot</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Guardian Ghana Technologies. All rights reserved.</p>
+            <p>Built with ❤️ in Ghana to protect Ghana's water</p>
+        </div>
+    </footer>
+</body>
+</html>
