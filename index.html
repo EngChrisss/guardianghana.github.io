@@ -6,7 +6,8 @@
     <!-- PROTECTION: Prevents search engines from indexing -->
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
-    <title>Guardian Ghana - AI Water Protection (Demo)</title>
+    <title>Guardian Ghana - AI Water Protection Platform</title>
+    <meta name="description" content="AI-powered water monitoring system that predicts pollution events 3-5 days in advance with 87% accuracy. Protecting Ghana's rivers from illegal mining.">
     <link rel="icon" href="Guardian Ghana Logo1.png" type="image/png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -100,6 +101,19 @@
         }
         .btn-secondary:hover {
             box-shadow: 0 6px 12px rgba(67, 160, 71, 0.3);
+        }
+        .demo-credentials {
+            background: #e8f5e9;
+            border: 2px solid #43A047;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: left;
+        }
+        .demo-credentials h4 {
+            color: #1E88E5;
+            margin-bottom: 10px;
         }
         
         /* Features */
@@ -240,7 +254,7 @@
                     <span>Guardian Ghana</span>
                 </div>
                 <div>
-                    <a href="#demo" class="btn">Live Demo</a>
+                    <a href="https://guardian-ghana-app.streamlit.app" class="btn" target="_blank">Live Demo</a>
                     <a href="#contact" class="btn btn-secondary">Request Access</a>
                 </div>
             </nav>
@@ -252,8 +266,16 @@
         <div class="container">
             <h1>🇬🇭 Protecting Ghana's Water with <span class="highlight">AI Intelligence</span></h1>
             <p>Real-time monitoring and predictive analytics to combat illegal mining pollution. <strong>87% accurate pollution prediction</strong>, 24/7 river monitoring, automated enforcement alerts.</p>
-            <a href="#demo" class="btn">View Interactive Dashboard</a>
+            
+            <a href="https://guardian-ghana-app.streamlit.app" class="btn" target="_blank">Launch Live Dashboard</a>
             <a href="#contact" class="btn btn-secondary">Schedule Private Demo</a>
+            
+            <div class="demo-credentials">
+                <h4>🟢 Demo Access Ready!</h4>
+                <p><strong>Live System:</strong> <a href="https://guardian-ghana-app.streamlit.app" style="color: #1E88E5;">https://guardian-ghana-app.streamlit.app</a></p>
+                <p><strong>Demo Passwords:</strong> EPA2024 (Government) • WRC2024 (Water Commission) • MINING2024 (Corporate)</p>
+                <p><em>Full enterprise access requires partnership agreement</em></p>
+            </div>
         </div>
     </section>
 
@@ -299,9 +321,9 @@
     <section class="demo" id="demo">
         <div class="container">
             <h2 class="section-title">Interactive Demo Dashboard</h2>
-            <p>Experience our AI-powered monitoring system (password protected)</p>
-            <a href="YOUR_STREAMLIT_LINK_HERE" class="btn" target="_blank" onclick="return requireLogin()">Launch Dashboard</a>
-            <p style="margin-top: 20px; color: #666; font-size: 14px;">(Requires access credentials - Contact for demo password)</p>
+            <p>Experience our AI-powered monitoring system (live and working)</p>
+            <a href="https://guardian-ghana-app.streamlit.app" class="btn" target="_blank">Launch Live Dashboard</a>
+            <p style="margin-top: 20px; color: #666; font-size: 14px;">(Live system • Password: EPA2024, WRC2024, MINING2024)</p>
         </div>
     </section>
 
@@ -336,30 +358,11 @@
 
     <!-- Protection Script -->
     <script>
-        function requireLogin() {
-            alert("🔒 Demo Access Required\n\nThis is a protected demo of Guardian Ghana's proprietary technology.\n\nPlease contact guardian.ghana.tech@gmail.com to request access credentials.\n\nWe'll respond within 24 hours with login details.");
-            return false; // Prevents link from opening
-        }
-        
         // Log page views (basic protection)
         console.log("🔐 Guardian Ghana Demo Access Log:");
         console.log("Access Time: " + new Date().toLocaleString());
         console.log("User Agent: " + navigator.userAgent);
-        console.log("IP Protection: Enabled");
-        
-        // Prevent right-click (optional - can be annoying)
-        document.addEventListener('contextmenu', function(e) {
-            if (confirm("⚠️ This content is proprietary. Copying is restricted.")) {
-                return true;
-            }
-            e.preventDefault();
-        });
-        
-        // Prevent text selection (optional)
-        document.addEventListener('selectstart', function(e) {
-            e.preventDefault();
-        });
+        console.log("Live Demo: https://guardian-ghana-app.streamlit.app");
     </script>
 </body>
 </html>
-
